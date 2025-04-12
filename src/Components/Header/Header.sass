@@ -1,0 +1,102 @@
+.header 
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #343c49
+    color: #ffffff
+    z-index: 999
+    padding: 0 20px
+    &__logo
+        padding: 10px 0
+        margin-right: 50px
+        margin-left: 20px
+        img
+            width: 120px
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(227deg) brightness(108%) contrast(101%)
+    &__navigation 
+        @media screen and (max-width: 1199px)
+            position: absolute
+            flex-direction: column
+            right: 0
+            background-color: #343c49
+            top: 100%
+            border-radius: 0 0 4px 4px
+
+        &--item 
+            position: relative
+            cursor: pointer
+            height: 75px
+            min-width: 200px
+            @media screen and (max-width: 1450px) 
+                min-width: 160px
+            @media screen and (max-width: 1199px) 
+                min-width: 300px
+                justify-content: flex-start
+                flex-direction: column
+                height: unset
+                align-items: flex-start
+            .name
+                font-size: 16px
+                font-weight: 600
+                padding: 0 12px
+                display: block
+                color: #ffffff
+                transition: color 0.1s
+                @media screen and (max-width: 1199px) 
+                    min-height: 40px
+                    display: flex
+                    font-weight: 500
+                    align-items: center
+            &:hover,
+            &.active            
+                background-color: #485160
+        .submenu
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+            background-color: #343c49
+            min-width: 160px
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+            border-radius: 0 0 4px 4px
+            @media screen and (max-width: 1199px) 
+                box-shadow: none
+                position: unset
+                width: 100%
+                background-color: #485160
+                padding-top: 5px
+            &__item
+                display: block
+                padding: 10px 15px
+                color: #fff
+                text-decoration: none
+                transition: background-color 0.2s, color 0.2s
+                @media screen and (min-width: 1200px) 
+                    border-bottom: 1px solid #5a5a75
+                    &:last-child
+                        border-bottom: none
+                    &:hover 
+                        background-color: #485160
+                    &.active 
+                        background-color: #626b7a
+                @media screen and (max-width: 1199px) 
+                    padding-left: 30px
+                    color: #dadada
+                    &.active,
+                    &:hover 
+                        color: #fff
+                
+    .mobile-menu-icon
+        padding: 10px
+        margin-left: auto
+        max-width: 50px
+        cursor: pointer
+        &:hover
+            span
+                background-color: #ffffff
+        span
+            height: 4px
+            width: 30px
+            background-color: #ededed
+            margin: 3px 0
